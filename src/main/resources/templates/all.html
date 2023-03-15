@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org/">
+<head>
+    <head th:replace="fragments :: head"></head>
+    <meta charset="UTF-8"/>
+</head>
+
+<body>
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+    <h2 class = "centered">All Jobs</h2>
+</div>
+
+
+<table th:replace="fragments :: jobResults"></table>
+
+</body>
+</html>
